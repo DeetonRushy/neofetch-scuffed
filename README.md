@@ -17,7 +17,7 @@ with a different colour
 | -L, --let-me-read | (requires verbose) will wait for a prompt after all logs have printed |
 | -l, --live | goes into a mode that refreshes the output every 1s, exit with ctrl+c |
 | -t, --time | will time how long it takes to fetch all info, scene as windows 'time' doesn't do this |
-| -s, --specific | takes multiple arguments, will display specific specs. (takes multiple arguments) |
+| -s, --specific | takes multiple arguments, will display specific specs |
 | --help | will display all the above information in the commandline |
 
 # Dependencies
