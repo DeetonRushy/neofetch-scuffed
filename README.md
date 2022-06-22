@@ -10,6 +10,9 @@ however, it looks cool and has some decent functionality.
 with a different colour
 ![pink color](https://media.discordapp.net/attachments/989233326973915139/989233511686877214/unknown.png?width=1093&height=609)
 
+images above are using [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=US), so it may
+not look so nice in native cmd
+
 ## CommandLine
 
 |Option| Functionality |
