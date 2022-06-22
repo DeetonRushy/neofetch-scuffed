@@ -1,6 +1,9 @@
 ## neofetch - scuffed edition
 It's just neofetch for windows. It's very scuffed and hard to read so edit at your own risk.
 
+it will not work on linux, I tried to make it so it would but couldn't be bothered writing the same check over and over.
+this doesn't matter anyways scene as you guys already have it :sweat_smile:
+
 however, it looks cool and has some decent functionality.
 
 ![default colours](https://media.discordapp.net/attachments/989233326973915139/989233349266665543/unknown.png)
