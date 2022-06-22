@@ -23,8 +23,8 @@ with a different colour
 # Dependencies
 
  - [System.Management](https://www.nuget.org/packages/System.Management/)
- - [CommandLine](https://github.com/commandlineparser/commandline)
- - [Newtonsoft.Json](https://www.newtonsoft.com/json)
+ - [CommandLine](https://www.nuget.org/packages/CommandLineParser/)
+ - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/13.0.2-beta1)
  - System.Windows.Forms, switch application to 'Windows Application' then back to 'Console Application' to get the reference
  - Microsoft.Win32, should be there already but might be different on things like VsCode
 
