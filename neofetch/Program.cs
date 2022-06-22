@@ -1,4 +1,4 @@
-﻿using Pastel;
+using Pastel;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -308,13 +308,6 @@ Console.Write("\n\n");
 
 [DllImport("kernel32.dll")]
 extern static ulong GetTickCount64();
-
-[DllImport("user32.dll")]
-extern static IntPtr GetDesktopWindow();
-
-[DllImport("user32.dll")]
-[return: MarshalAs(UnmanagedType.Bool)]
-extern unsafe static bool GetWindowRect(IntPtr hWnd, ref RECT rect);
 
 static unsafe string GetResolution()
 {
@@ -645,64 +638,6 @@ public class SpecList
     public string PackageCount { get; set; } = UnknownSpec;
     [JsonProperty]
     public string ScreenResolution { get; set; } = UnknownSpec;
-}
-
-[StructLayout(LayoutKind.Sequential)]
-struct RECT
-{
-    public long Left;
-    public long Top;
-    public long Right;
-    public long Bottom;
-}
-
-class MonitorRefreshRate
-{
-    [DllImport("user32.dll")]
-    public static extern bool EnumDisplaySettings(
-      string deviceName, int modeNum, ref DEVMODE devMode);
-    const int ENUM_CURRENT_SETTINGS = -1;
-
-    const int ENUM_REGISTRY_SETTINGS = -2;
-
-    [StructLayout(LayoutKind.Sequential)]
-    public struct DEVMODE
-    {
-        private const int CCHDEVICENAME = 0x20;
-        private const int CCHFORMNAME = 0x20;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
-        public string dmDeviceName;
-        public short dmSpecVersion;
-        public short dmDriverVersion;
-        public short dmSize;
-        public short dmDriverExtra;
-        public int dmFields;
-        public int dmPositionX;
-        public int dmPositionY;
-        public object dmDisplayOrientation;
-        public int dmDisplayFixedOutput;
-        public short dmColor;
-        public short dmDuplex;
-        public short dmYResolution;
-        public short dmTTOption;
-        public short dmCollate;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 0x20)]
-        public string dmFormName;
-        public short dmLogPixels;
-        public int dmBitsPerPel;
-        public int dmPelsWidth;
-        public int dmPelsHeight;
-        public int dmDisplayFlags;
-        public int dmDisplayFrequency;
-        public int dmICMMethod;
-        public int dmICMIntent;
-        public int dmMediaType;
-        public int dmDitherType;
-        public int dmReserved1;
-        public int dmReserved2;
-        public int dmPanningWidth;
-        public int dmPanningHeight;
-    }
 }
 
 public class App
