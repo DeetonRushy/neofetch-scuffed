@@ -310,7 +310,7 @@ static unsafe string GetResolution()
 
 static void WriteSpec(string specName, string specDescription)
 {
-    Console.WriteLine($"{specName.Pastel(App.Instance.SelectedColor)}: {specDescription.Pastel(Color.White)}");
+    Console.WriteLine($"{specName.Pastel(App.Instance?.SelectedColor ?? Color.Red)}: {specDescription.Pastel(Color.White)}");
 }
 static string DashLineL(int sz)
 {
