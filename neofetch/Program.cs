@@ -10,8 +10,6 @@ using Newtonsoft.Json;
 using Microsoft.Win32;
 using System.Windows.Forms;
 
-SpecList ls = new(); // <<--- temporary, remove
-
 Dictionary<string, Color> SupportedColours = new()
 {
     { "Blue", Color.Blue },
