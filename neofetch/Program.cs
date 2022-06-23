@@ -532,9 +532,12 @@ static string GetOSInfo()
 }
 static string GetPackageCount()
 {
+    if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+        return "<Platform-Not-Supported>";
+
     int installedPackages = 0;
     string uninstallKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
-    using (RegistryKey rk = Registry.LocalMachine.OpenSubKey(uninstallKey))
+    using (RegistryKey? rk = Registry.LocalMachine.OpenSubKey(uninstallKey))
     {
         installedPackages += rk?.SubKeyCount ?? 0;
     }
