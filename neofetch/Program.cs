@@ -581,14 +581,14 @@ static void WriteColorSquares()
 }
 static void VerboseLog(string message)
 {
-    if (App.Instance.Verbose)
+    if (App.Instance?.Verbose ?? false)
     {
         Console.WriteLine(message);
     }
 }
 static void VerboseAction(Action act)
 {
-    if (App.Instance.Verbose)
+    if (App.Instance?.Verbose ?? false)
         act();
 }
 
