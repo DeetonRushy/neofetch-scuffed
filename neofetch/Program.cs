@@ -131,13 +131,6 @@ Dictionary<string, Action> SupportedActions = new()
         }
     },
     {
-        "Dargcount",
-        () =>
-        {
-            WriteSpec("ArgumentCount", args.Length.ToString());
-        }
-    },
-    {
         "Packages",
         () =>
         {
