@@ -314,12 +314,7 @@ static void WriteSpec(string specName, string specDescription)
 }
 static string DashLineL(int sz)
 {
-    string result = "";
-
-    for (int i = 0; i < sz; i++)
-        result += '-';
-
-    return result;
+    return new string('-', sz);
 }
 
 static SpecList FetchSpecs(bool useSaved)
